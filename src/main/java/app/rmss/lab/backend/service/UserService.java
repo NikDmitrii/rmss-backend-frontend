@@ -15,6 +15,9 @@ public class UserService {
     private final UserRepository userRepository;
 
     public User create(User user) {
+        if (user.getAge() < 0) {
+            throw new IllegalArgumentException("Age cannot be negative");
+        }
         return userRepository.save(user);
     }
 
