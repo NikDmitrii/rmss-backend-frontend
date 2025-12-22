@@ -1,28 +1,18 @@
 # Лаба бэкенд - фронт
 
-# Сборка
-установить мавен, jvm с поддержкой java 21
+## Сборка через Docker
 
-выполнить:
+- Установить Docker и запустить службу Docker
+- Порт **8080** на хосте должен быть свободен
+- Выполнить команды:
 
-mvn clean install
+```bash
+sudo docker build -t rmss-lab .
+sudo docker run -it -p 8080:8080 rmss-lab
+```
 
-mvn spring-boot:run
-# или так, если maven не установлен, но jvm все равно нужна
-./mvnw clean install
-
-./mvnw spring-boot:run
-
-# Запуск:
-порт 8080 должен быть свободный
-
-Открыть браузер на http://localhost:8080/
-
-получить пользователей:
-
-GET /api/users
-
-посмотреть пользователя с id
-
-GET /api/users/id
+## Проверка:
+- Открыть браузер на http://localhost:8080/ (должен загрузиться html и js)
+- получить пользователей: GET /api/users
+- посмотреть пользователя с id GET /api/users/id
 
