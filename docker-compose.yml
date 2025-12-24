@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    container_name: rmss-lab-backend
+    ports:
+      - "8080:8080"

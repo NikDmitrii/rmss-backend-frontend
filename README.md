@@ -6,9 +6,15 @@
 - Порт **8080** на хосте должен быть свободен
 - Выполнить команды:
 
+### без docker compose
 ```bash
 sudo docker build -t rmss-lab .
 sudo docker run -it -p 8080:8080 rmss-lab
+```
+
+### с докер compose
+```bash
+sudo docker compose up --build
 ```
 
 ## Проверка:
